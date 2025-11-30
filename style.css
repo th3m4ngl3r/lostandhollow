@@ -1,7 +1,7 @@
 /*DEFINING FONT*/
 @font-face {
-font-family: 'mtw'; /* Give your font a name */
-src: url('media/moms_typewritter.ttf') format('truetype'); 
+font-family: 'cn'; /* Give your font a name */
+src: url('media/courier_new.ttf') format('truetype'); 
 }
 
 /*MAIN*/
@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: black;
-  font-family: Courier New;
+  font-family: cn;
 }
 
 .container {
