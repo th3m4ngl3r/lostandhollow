@@ -28,16 +28,38 @@ nav {
 }
 
 /* NAVBAR: HOVER */
+/* Que cada opción ocupe todo el ancho */
 .navbar-nav .nav-link {
-  color: black; /* color normal del texto */
-  transition: color 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    text-align: right;   /* texto a la derecha */
+    padding-right: 20px; /* separarlo un poquito del borde */
 }
 
-.navbar-nav .nav-link:hover {
-  color: red; /* El texto se vuelve rojo al pasar el mouse */
-  background-color: rgba(255, 0, 0, 0.15); /* color de fondo cuando pasa el mouse */
-  border-radius: 4px;
+
+/* Hacer que la columna del menú abarque TODO el ancho */
+.navbar-nav {
+    width: 100%;
+    align-items: stretch !important; /* Estira el <ul> y sus elementos */
 }
+
+/* Que cada <li> ocupe también todo el ancho */
+.navbar-nav .nav-item {
+    width: 100%;
+}
+
+/* Que cada link ocupe todo el ancho y el texto esté a la derecha */
+.navbar-nav .nav-link {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Hover de ancho completo */
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+
 
 /* TÍTULO Y BOTÓN DEL NAVBAR */
 .navbar-toggler-icon {
@@ -48,6 +70,25 @@ nav {
 height: 30px;
 width: 30px;
 }
+
+@media (max-width: 991px) {
+
+  /* Cuando está ABIERTO, bootstrap le pone la clase .show */
+  .navbar-collapse.show {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+    text-align: right;
+    margin-top: 10px;
+  }
+}
+
+
+
+
 
 
 /* Para pantallas más pequeñas (móviles) */
@@ -67,8 +108,61 @@ width: 30px;
 
   /* Ajustar el tamaño del logo en dispositivos móviles */
   .navbar img {
-    width: 45px; /* Reducir el tamaño del logo */
+    width: 40px; /* Reducir el tamaño del logo */
     height: auto; 
+  }
+}
+
+/*NAVBAR MENU TEXT ALIGN RIGHT-LEFT*/
+.menu-container {
+  display: flex;
+  justify-content: flex-end; /* El menú aparece a la derecha */
+}
+
+.menu {
+  width: 200px;
+  background: #222;
+  padding: 10px;
+  text-align: left; /* El texto interno alineado a la izquierda */
+}
+
+/*MAINTITLE*/
+.mainTitle h3{
+color: red;
+}
+
+.aboutGrid h2{
+color: red;
+}
+
+/* ============================
+   MENU EN PANTALLAS GRANDES (PC)
+   ============================ */
+@media (min-width: 992px) {
+
+  /* El menú vuelve a comportamiento normal de Bootstrap */
+  .navbar-nav {
+    width: auto;
+    flex-direction: row;        /* En línea */
+    margin-left: auto;          /* Empujar a la derecha */
+    text-align: right;
+  }
+
+  /* Cada item solo ocupa su espacio, no todo el ancho */
+  .navbar-nav .nav-item {
+    width: auto;
+  }
+
+  .navbar-nav .nav-link {
+    width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: right;
+  }
+
+  /* Hover corto (solo detrás del texto) */
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(255,0,0,0.25);
   }
 }
 
@@ -129,12 +223,11 @@ footer {
 
 .mainTitle h1 {
   color: black;
-  text-transform: uppercase;
   background-color: #525252;
+  font-size: 10px;
   padding: 10px;
   display: inline-block; /* Hace que el texto se ajuste al contenido */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el texto */
-  letter-spacing: 2px; /* Espaciado entre letras */
 }
 
 /* Responsividad para pantallas pequeñas */
@@ -172,6 +265,29 @@ footer {
   transition: transform 0.3s;
 }
 
+/* Estado general: botón dentro del flujo de la página */
+/* YOUTUBE LOGO CENTRADO COMO CONTENIDO */
+.youtube-btn-container {
+  display: flex;
+  justify-content: center; /* SIEMPRE centrado */
+  width: 100%;
+  margin: 30px 0 2px 0; /* Espacio arriba y abajo */
+}
+
+.youtube-btn-container img {
+  width: 45px;
+  height: 45px;
+}
+
+/* En pantallas pequeñas (iPhone) → centrar */
+@media (max-width: 480px) {
+  .youtube-btn-container {
+    justify-content: center; /* Centrar en móvil */
+  }
+}
+
+
+
 /* FOOTER */
 footer {
   color: grey;
@@ -202,6 +318,38 @@ footer {
 /* Alineación de título en pantallas grandes */
 @media (min-width: 1200px) {
   .mainTitle h1 {
-    font-size: 4rem; /* Aumentar el tamaño del texto en pantallas grandes */
+    font-size: 2.8rem; /* Aumentar el tamaño del texto en pantallas grandes */
   }
 }
+
+/* ============================
+   MENU EN PANTALLAS GRANDES (PC)
+   ============================ */
+@media (min-width: 992px) {
+
+  /* El menú vuelve a comportamiento normal de Bootstrap */
+  .navbar-nav {
+    width: auto;
+    flex-direction: row;        /* En línea */
+    margin-left: auto;          /* Empujar a la derecha */
+    text-align: right;
+  }
+
+  /* Cada item solo ocupa su espacio, no todo el ancho */
+  .navbar-nav .nav-item {
+    width: auto;
+  }
+
+  .navbar-nav .nav-link {
+    width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: right;
+  }
+
+  /* Hover corto (solo detrás del texto) */
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(255,0,0,0.25);
+  }
+}
+
