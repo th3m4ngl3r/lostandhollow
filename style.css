@@ -1,10 +1,10 @@
-/*DEFINING FONT*/
+/* DEFINIR FUENTE */
 @font-face {
-font-family: 'cn'; /* Give your font a name */
-src: url('media/courier_new.ttf') format('truetype'); 
+  font-family: 'cn'; /* Dar un nombre a la fuente */
+  src: url('media/courier_new.ttf') format('truetype');
 }
 
-/*MAIN*/
+/* MAIN */
 html, body {
   height: 100%;
   margin: 0;
@@ -22,127 +22,142 @@ body {
   flex: 1;
 }
 
-/*NAVBAR*/
-nav{
-background-color: #525252;
+/* NAVBAR */
+nav {
+  background-color: #525252;
 }
 
-
-/*NAVBAR: HOVER*/
+/* NAVBAR: HOVER */
 .navbar-nav .nav-link {
-color: black;          /* normal text color */
-transition: color 0.3s ease, background-color 0.3s ease;
+  color: black; /* color normal del texto */
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-color: red;            /* text turns red on hover */
-background-color: rgba(255, 0, 0, 0.15);
-/*background-color: rgba(0, 0, 0, 0.1);  black glow */
-border-radius: 4px;
+  color: red; /* El texto se vuelve rojo al pasar el mouse */
+  background-color: rgba(255, 0, 0, 0.15); /* color de fondo cuando pasa el mouse */
+  border-radius: 4px;
+}
+
+/* TÍTULO Y BOTÓN DEL NAVBAR */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miter-limit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar img{
+height: 30px;
+width: 30px;
 }
 
 
-/*NV: PHONE SIZE TITILE*/
-/* Solo centramos el título para pantallas que sean del tamaño de un iPhone (320px - 414px) */
-@media (min-width: 320px) and (max-width: 414px) {
+/* Para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
   .navbar-brand {
-    text-align: center;  /* Centra el título */
-    width: 100%;         /* Asegura que ocupe todo el ancho del contenedor */
-    margin-left: 0;      /* Elimina márgenes de izquierda */
-    margin-right: 0;     /* Elimina márgenes de derecha */
+    font-size: 1.5rem; /* Reducir el tamaño del texto para pantallas pequeñas */
+  }
+
+  .navbar-toggler {
+    margin-right: 10px; /* Asegurar que el botón no se deforme */
+  }
+
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px; /* Ajustar el tamaño del ícono */
+  }
+
+  /* Ajustar el tamaño del logo en dispositivos móviles */
+  .navbar img {
+    width: 45px; /* Reducir el tamaño del logo */
+    height: auto; 
   }
 }
 
+/* Para pantallas más pequeñas (hasta 414px) */
+@media (max-width: 414px) {
+  .mainTitle h1 {
+    font-size: 2rem; /* Ajustar el tamaño del título en pantallas pequeñas */
+    padding: 5px;
+    margin: 0 5px; /* Ajustar márgenes */
+  }
 
-/*NV: BUTTON*/
-.navbar-toggler-icon{
-background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miter-limit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
+  /* Ajustar el tamaño de las imágenes */
+  .grid-img {
+    width: 100%;
+    height: auto;
+  }
 
-
-/* Para pantallas más grandes, el título se mantiene alineado a la izquierda (opcional) */
-@media (min-width: 415px) {
-  .navbar-brand {
-    text-align: left;  /* Alinea el título a la izquierda en pantallas más grandes */
+  /* Botón flotante de TikTok */
+  .tiktok-float {
+    bottom: 10px;  /* Colocar el botón más abajo */
+    right: 10px;   /* Colocar más cerca del borde */
+    width: 35px;
+    height: 35px;
   }
 }
 
-
-/* Desactivar la selección de texto en toda la página */
-* {
-  -webkit-user-select: none;  /* Safari y Chrome */
-  -moz-user-select: none;     /* Firefox */
-  -ms-user-select: none;      /* Internet Explorer/Edge */
-  user-select: none;          /* Estándar para todos los navegadores modernos */
+/* Asegurarse que las imágenes se ajusten a la pantalla sin deformarse */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
+/* Estilos del footer */
+footer {
+  font-size: 0.9rem; /* Reducir tamaño del texto del footer */
+  padding: 10px 0;
+  color: grey;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
 
-/*MAIN TITLE*/
-.mainTitle{
-margin-top: 50px; /* adjust the value as needed */
-color: grey;
-text-align: center;
-margin-left: 5px;
-margin-right: 3px;
+/* Estilo de las imágenes del grid */
+.grid-img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+/* MAIN TITLE */
+.mainTitle {
+  margin-top: 50px; /* ajustar el valor según sea necesario */
+  color: grey;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 3px;
 }
 
 .mainTitle h1 {
-  color: black; 
-  text-transform: uppercase; 
-  background-color: #525252; 
-  padding: 10px; 
+  color: black;
+  text-transform: uppercase;
+  background-color: #525252;
+  padding: 10px;
   display: inline-block; /* Hace que el texto se ajuste al contenido */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Sombra para hacer que el texto resalte más */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el texto */
   letter-spacing: 2px; /* Espaciado entre letras */
 }
 
-/* Responsividad para pantallas pequeñas (como las de un iPhone) */
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 414px) {
   .mainTitle h1 {
-    font-size: 3rem; /* Reducir el tamaño del texto en pantallas pequeñas */
-    padding: 5px 10px; /* Reducir el espaciado */
+    font-size: 2rem;  /* Ajustar el tamaño del texto en pantallas pequeñas */
+    padding: 5px;
     margin-left: 10px; /* Ajuste de márgenes */
     margin-right: 10px;
     letter-spacing: 1px; /* Ajustar el espaciado entre letras */
   }
 }
 
-.mainTitle  h3{
-color: red;
-}
+/* SOCIAL BUTTONS */
 
-.aboutGrid  h2{
-color: red;
-}
-
-/*MAIN IMG STYLE*/
-.grid-img {
-width: 100%;
-height: auto;
-max-width: 400px;
-}
-
-.container {
-padding-left: 0 !important;
-padding-right: 0 !important;
-}
-
-.container-fluid.text-center {
-margin-top: 5px; /* adjust the value as needed */
-}
-
-
-/*SOCIAL BUTTONS*/
-
-/*SOCIAL BUTTON: TIKTOK BUTTON*/
-/* TikTok Floating Button */
+/* SOCIAL BUTTON: TIKTOK BUTTON */
 .tiktok-float {
-  position: fixed;      /* stays visible while scrolling */
-  bottom: 400px;         /* distance from bottom */
-  right: 20px;          /* distance from right */
+  position: fixed; /* Mantener visible mientras se desplaza */
+  bottom: 400px;    /* Distancia desde el fondo */
+  right: 20px;      /* Distancia desde la derecha */
   width: 40px;
   height: 40px;
-  z-index: 1000;        /* above everything else */
+  z-index: 1000;    /* Asegurarse de que esté encima de otros elementos */
   cursor: pointer;
 }
 
@@ -151,81 +166,42 @@ margin-top: 5px; /* adjust the value as needed */
   height: 100%;
 }
 
-/* Optional hover effect */
+/* Efecto opcional en hover */
 .tiktok-float:hover {
   transform: scale(1.1);
   transition: transform 0.3s;
 }
 
-
-/*==RECORDS==*/
-
-
-/*PREVIOUS TRACKS*/
-.previousTracks{
-margin-top:30px;
-}
-
-
-/*==SCB:YOUTUBE==*/
-
-/* SCB: YOUTUBE*/
-.youtube-btn-container {
-  width: 100%;           
-  text-align: center;    
-  margin-top: 20px;      
-  margin-bottom: 20px;   
-}
-
-.youtube-footer-btn img {
-  width: 30px;          
-  height: 30px;
-  transition: transform 0.3s;
-}
-
-/* Hover effect para el botón */
-.youtube-footer-btn img:hover {
-  transform: scale(1.1); 
-}
-
-/*FOOTER*/
+/* FOOTER */
 footer {
   color: grey;
   text-align: center;
   padding: 20px 0;
-  margin-top: auto;  
+  margin-top: auto;
   width: 100%;
 }
 
-
-/*==ABOUT==*/
-
-.aboutGrid{
-color: grey;
-margin-left:30px;
-margin-right:30px;
+/* Ajustes en el grid de la sección "ABOUT" */
+.aboutGrid {
+  color: grey;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-.aboutGrid h3{
-color: grey;
-font-size: 20px;
-text-align:left;
+.aboutGrid h3 {
+  color: grey;
+  font-size: 20px;
+  text-align: left;
 }
 
-.aboutGrid p{
-color: grey;
-font-size: 12px;
+.aboutGrid p {
+  color: grey;
+  font-size: 12px;
 }
 
-
-/*FOOTER*/
-footer{
-color: grey;
-text-align: center;
-padding: 2px 0;
-margin-top: auto;
-width: 100%;
+/* Alineación de título en pantallas grandes */
+@media (min-width: 1200px) {
+  .mainTitle h1 {
+    font-size: 4rem; /* Aumentar el tamaño del texto en pantallas grandes */
+  }
 }
-
-
-
