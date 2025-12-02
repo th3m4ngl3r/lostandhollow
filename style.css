@@ -359,3 +359,14 @@ footer {
   }
 }
 
+/* =======================================================
+   FIX: TIKTOK BUTTON INVISIBLE EN HORIZONTAL EN IPHONE
+   ======================================================= */
+@media (orientation: landscape) {
+  .tiktok-float {
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
