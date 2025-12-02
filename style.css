@@ -221,25 +221,31 @@ footer {
   margin-right: 3px;
 }
 
+
 .mainTitle h1 {
   color: black;
   background-color: #525252;
-  font-size: 10px;
+  font-size: 30px; /* tamaño normal en vertical móvil */
   padding: 10px;
-  display: inline-block; /* Hace que el texto se ajuste al contenido */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el texto */
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 414px) {
+/* PC — tu tamaño actual real */
+@media (min-width: 992px) {
   .mainTitle h1 {
-    font-size: 2rem;  /* Ajustar el tamaño del texto en pantallas pequeñas */
-    padding: 5px;
-    margin-left: 10px; /* Ajuste de márgenes */
-    margin-right: 10px;
-    letter-spacing: 1px; /* Ajustar el espaciado entre letras */
+    font-size: 4rem;
   }
 }
+
+/* TELÉFONO en HORIZONTAL → mostrar igual que PC */
+@media (max-width: 991px) and (orientation: landscape) {
+  .mainTitle h1 {
+    font-size: 35px;  /* MISMO tamaño que en PC */
+  }
+}
+
+
 
 /* SOCIAL BUTTONS */
 
