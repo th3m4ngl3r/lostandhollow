@@ -25,7 +25,16 @@ body {
 /* NAVBAR */
 nav {
   background-color: #525252;
+  padding: 5px 0;
 }
+
+
+#logo-lhlg2 {
+  height: 60px;  /* Ajusta el tamaño de la imagen */
+  width: auto;
+  vertical-align: middle;
+}
+
 
 /* NAVBAR: HOVER */
 /* Que cada opción ocupe todo el ancho */
@@ -83,11 +92,16 @@ width: 30px;
     margin-left: auto;
     text-align: right;
     margin-top: 10px;
+  } 
+
+  #logo-lhlg2 {
+  height: 60px;  /* Ajusta el tamaño de la imagen */
+  width: auto;
+  vertical-align: middle;
+  padding-left: 35px;
   }
+  
 }
-
-
-
 
 
 
@@ -111,6 +125,14 @@ width: 30px;
     width: 40px; /* Reducir el tamaño del logo */
     height: auto; 
   }
+ 
+  #logo-lhlg2 {
+  height: 60px;  /* Ajusta el tamaño de la imagen */
+  width: auto;
+  vertical-align: middle;
+  padding-left: 35px;
+  }
+  
 }
 
 /*NAVBAR MENU TEXT ALIGN RIGHT-LEFT*/
