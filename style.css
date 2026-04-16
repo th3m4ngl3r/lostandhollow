@@ -1,0 +1,538 @@
+/*FONT*/
+@font-face {
+  font-family: 'cn'; /* Dar un nombre a la fuente */
+  src: url('media/courier_new.ttf') format('truetype');
+}
+
+
+/*WARNING BLUR*/
+#mainContent.blur {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#warningOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.warning-box h2{
+color: red;
+}
+
+
+.warning-box {
+  text-align: center;
+  color: white;
+  max-width: 500px;
+  padding: 30px;
+  border: 1px solid red;
+  box-shadow: 0 0 20px red;
+}
+
+/*buttons */
+.warning-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+/* MAIN */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  font-family: cn;
+}
+
+.container {
+  flex: 1;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #525252;
+  padding: 5px 0;
+}
+
+#logo-lhlg2 {
+  height: 60px;  
+  width: auto;
+  vertical-align: middle;
+}
+
+/* NAVBAR: HOVER */
+.navbar-nav .nav-link {
+    width: 100%;
+    text-align: right;   
+    padding-right: 20px;
+}
+
+.navbar-nav {
+    width: 100%;
+    align-items: stretch !important; 
+}
+
+
+.navbar-nav .nav-item {
+    width: 100%;
+}
+
+.navbar-nav .nav-link {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+
+/*title*/
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miter-limit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar img{
+height: 30px;
+width: 30px;
+}
+
+@media (max-width: 991px) {
+
+  .navbar-collapse.show {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+    text-align: right;
+    margin-top: 10px;
+  } 
+
+  #logo-lhlg2 {
+  height: 60px;  
+  width: auto;
+  vertical-align: middle;
+  padding-left: 35px;
+  }
+  
+}
+
+/*mobile screen*/
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem; 
+  }
+
+  .navbar-toggler {
+    margin-right: 10px; 
+  }
+
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px; 
+  }
+
+  .navbar img {
+    width: 40px; 
+    height: auto; 
+  }
+ 
+  #logo-lhlg2 {
+  height: 60px;  
+  width: auto;
+  vertical-align: middle;
+  padding-left: 35px;
+  }
+  
+}
+
+/*NAVBAR MENU TEXT ALIGN RIGHT-LEFT*/
+.menu-container {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.menu {
+  width: 200px;
+  background: #222;
+  padding: 10px;
+  text-align: left; 
+}
+
+/*MAINTITLE*/
+.mainTitle h3{
+color: red;
+}
+
+.aboutGrid h2{
+color: red;
+}
+
+/*big screen*/
+@media (min-width: 992px) {
+
+  .navbar-nav {
+    width: auto;
+    flex-direction: row;        
+    margin-left: auto;         
+    text-align: right;
+  }
+
+  .navbar-nav .nav-item {
+    width: auto;
+  }
+
+  .navbar-nav .nav-link {
+    width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: right;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(255,0,0,0.25);
+  }
+}
+
+/*small screen*/
+@media (max-width: 414px) {
+  .mainTitle h1 {
+    font-size: 2rem; 
+    padding: 5px;
+    margin: 0 5px; 
+  }
+
+  .grid-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .social-float {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .social-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+/*adjust img to screen*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.grid-img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+/* MAIN TITLE */
+.mainTitle {
+  margin-top: 50px; 
+  color: grey;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+
+.mainTitle h1 {
+  color: black;
+  background-color: #525252;
+  font-size: 30px; 
+  padding: 10px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+/*MAINTRACK*/
+.cover-container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.cover-img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+/*LATESTTRACKS*/
+.cover-img2 { 
+  max-width: 470px;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;    
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/*BLUR IMG*/
+.cover-container:hover .cover-img {
+  filter: blur(6px);
+}
+
+.cover-container:hover .overlay {
+  opacity: 1;
+}
+
+.cover-container:hover .cover-img2 {
+  filter: blur(6px);
+}
+
+.cover-container.active .cover-img2 {
+  filter: blur(6px);
+}
+
+
+/*MUSIC BUTTONS*/
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  background-color: #7b2cbf; 
+  color: white;
+  border-radius: 50%;       
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 22px;
+  text-decoration: none;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/*LATEST RELEASES*/
+
+/*BUTTONS IMG #1*/
+.icon-btn.purple {
+  background-color: grey;
+  color: white;
+}
+
+.icon-btn.purple:hover {
+  background-color: #9d4edd;
+}
+
+/*BUTTONS IMG #2*/
+.icon-btn.gray {
+  background-color: #444;
+  color: white;
+}
+
+.icon-btn.gray:hover {
+  background-color: #9d4edd;
+}
+
+.icon-btn:hover {
+  transform: scale(1.15);
+  background-color: #9d4edd; 
+}
+
+/*mobile tap*/
+.cover-container.active .cover-img {
+  filter: blur(6px);
+}
+
+.cover-container.active .overlay {
+  opacity: 1;
+}
+
+
+/*PC SCREEN DEFAULT SIZE*/
+@media (min-width: 992px) {
+  .mainTitle h1 {
+    font-size: 4rem;
+  }
+}
+
+/*HORZIONTAL PHONE SCREEN */
+@media (max-width: 991px) and (orientation: landscape) {
+  .mainTitle h1 {
+    font-size: 35px;  /* MISMO tamaño que en PC */
+  }
+}
+
+
+/* SOCIAL BUTTONS */
+.social-float {
+  position: fixed;
+  bottom: 400px;
+  right: 20px;
+  display: flex;
+  gap: 10px; 
+  z-index: 1000;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  background-color: #111;
+  color: white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  text-decoration: none;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.15);
+  background-color: grey;
+}
+
+
+/*TH3_M4NGL3R BUTTONS*/
+.music-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.icon-btn.mini {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #444; 
+}
+
+.artist-text {
+  text-align: center;
+  color: grey;
+  margin-top: 15px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*MOBILE SCREEN*/
+@media (max-width: 480px) {
+  .youtube-btn-container {
+    justify-content: center; /* Centrar en móvil */
+  }
+}
+
+
+/* FOOTER */
+footer {
+  color: grey;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Ajustes en el grid de la sección "ABOUT" */
+.aboutGrid {
+  color: grey;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.aboutGrid h3 {
+  color: grey;
+  font-size: 20px;
+  text-align: left;
+}
+
+.aboutGrid p {
+  color: grey;
+  font-size: 12px;
+}
+
+/*BIGGER SCREENS */
+@media (min-width: 1200px) {
+  .mainTitle h1 {
+    font-size: 2.8rem; 
+  }
+}
+
+/*BIGGER PC SCREENS*/
+@media (min-width: 992px) {
+
+  .navbar-nav {
+    width: auto;
+    flex-direction: row;        
+    margin-left: auto;          
+    text-align: right;
+  }
+
+  .navbar-nav .nav-item {
+    width: auto;
+  }
+
+  .navbar-nav .nav-link {
+    width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: right;
+  }
+
+
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(255,0,0,0.25);
+  }
+}
+
+/*SHOW SOCIAL BUTTONS IN PHONES*/
+@media (orientation: landscape) {
+  .social-float {
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
